@@ -1,0 +1,52 @@
+{
+  "model_version": "calibrated_policy_v3",
+  "window_start": "2025-01-01 00:00:00+00:00",
+  "window_end": "2025-01-01 09:00:40+00:00",
+  "metrics": {
+    "labeled_transactions": 100,
+    "fraud_labels": 1,
+    "fraud_rate": 0.01,
+    "pr_auc": 1.0,
+    "roc_auc": 1.0,
+    "brier_score": 0.00429696470343,
+    "log_loss": 0.016108311583360336,
+    "ece": 0.01233245,
+    "investigation_capture_rate": 1.0,
+    "metric_status": "PROVISIONAL"
+  },
+  "segments": {
+    "online": {
+      "metrics": {
+        "labeled_transactions": 32,
+        "fraud_labels": 0,
+        "fraud_rate": 0.0,
+        "metric_status": "PROVISIONAL"
+      },
+      "alerts": [
+        "INSUFFICIENT_FRAUD_LABELS",
+        "SINGLE_CLASS_LABEL_WINDOW"
+      ]
+    },
+    "pos": {
+      "metrics": {
+        "labeled_transactions": 68,
+        "fraud_labels": 1,
+        "fraud_rate": 0.014705882352941176,
+        "pr_auc": 1.0,
+        "roc_auc": 1.0,
+        "brier_score": 0.00627408994357353,
+        "log_loss": 0.021655870452035507,
+        "ece": 0.016126220588235294,
+        "investigation_capture_rate": 1.0,
+        "metric_status": "PROVISIONAL"
+      },
+      "alerts": [
+        "INSUFFICIENT_FRAUD_LABELS"
+      ]
+    }
+  },
+  "alerts": [
+    "INSUFFICIENT_FRAUD_LABELS",
+    "INSUFFICIENT_MATURED_LABELS"
+  ]
+}

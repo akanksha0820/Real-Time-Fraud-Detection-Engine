@@ -1,0 +1,41 @@
+{
+  "rows": 10000,
+  "tolerance": 1e-06,
+  "status": "PASS",
+  "maximum_absolute_difference": {
+    "amount_inr": 0.0,
+    "hour": 0.0,
+    "day_of_week": 0.0,
+    "is_weekend": 0.0,
+    "is_night": 0.0,
+    "merchant_risk_score": 0.0,
+    "amount_to_typical_ratio": 0.0,
+    "amount_to_income_ratio": 0.0,
+    "distance_from_home_km": 4.547473508864641e-13,
+    "seconds_since_previous_tx": 0.0,
+    "distance_from_previous_km": 3.552713678800501e-15,
+    "travel_speed_kmh": 1.1102230246251565e-16,
+    "customer_device_prior_uses": 0.0,
+    "is_new_device": 0.0,
+    "customer_merchant_prior_uses": 0.0,
+    "is_new_merchant": 0.0,
+    "tx_count_10m": 0.0,
+    "amount_sum_10m": 3.637978807091713e-12,
+    "tx_count_1h": 0.0,
+    "amount_sum_1h": 3.637978807091713e-12,
+    "tx_count_24h": 0.0,
+    "amount_sum_24h": 7.275957614183426e-12,
+    "device_global_prior_uses": 0.0,
+    "merchant_tx_count_1h": 0.0,
+    "merchant_tx_count_24h": 0.0,
+    "merchant_velocity_ratio": 0.0
+  },
+  "category_mismatches": {
+    "payment_channel": 0,
+    "risk_tier": 0,
+    "merchant_category": 0,
+    "customer_segment": 0
+  },
+  "failed_numeric": {},
+  "failed_categories": {}
+}

@@ -1,0 +1,21 @@
+{
+  "reference_rows": 750000,
+  "current_rows": 250000,
+  "reference_fraud_rate": 0.009004,
+  "current_fraud_rate": 0.008988,
+  "feature_psi": {
+    "amount_inr": 4.724432319466836e-05,
+    "merchant_risk_score": 0.00010383719705986909,
+    "tx_count_1h": 0.0,
+    "distance_from_home_km": 1.991211532829476e-05
+  },
+  "drifted_features": [],
+  "scenario_counts": {
+    "account_takeover": 627,
+    "card_testing": 438,
+    "velocity_attack": 408,
+    "impossible_travel": 348,
+    "high_risk_merchant": 242,
+    "fraud_ring": 184
+  }
+}

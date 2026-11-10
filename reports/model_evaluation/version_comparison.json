@@ -1,0 +1,62 @@
+{
+  "pr_auc": {
+    "metric": "pr_auc",
+    "hardened_v2": 0.8132320275313059,
+    "calibrated_policy_v3": 0.8037814565552015,
+    "absolute_change": -0.009450570976104355
+  },
+  "roc_auc": {
+    "metric": "roc_auc",
+    "hardened_v2": 0.9780941813654636,
+    "calibrated_policy_v3": 0.9765635983128514,
+    "absolute_change": -0.0015305830526121111
+  },
+  "brier_score": {
+    "metric": "brier_score",
+    "hardened_v2": 0.009525907225906849,
+    "calibrated_policy_v3": 0.0031085740168691426,
+    "absolute_change": -0.006417333209037706
+  },
+  "log_loss": {
+    "metric": "log_loss",
+    "hardened_v2": 0.0451117642223835,
+    "calibrated_policy_v3": 0.014992270522011011,
+    "absolute_change": -0.030119493700372486
+  },
+  "block_precision": {
+    "metric": "block_precision",
+    "hardened_v2": 0.8326653306613226,
+    "calibrated_policy_v3": 0.9529702970297029,
+    "absolute_change": 0.12030496636838028
+  },
+  "block_recall": {
+    "metric": "block_recall",
+    "hardened_v2": 0.7244986922406277,
+    "calibrated_policy_v3": 0.33565823888404533,
+    "absolute_change": -0.38884045335658235
+  },
+  "investigation_capture_rate": {
+    "metric": "investigation_capture_rate",
+    "hardened_v2": 0.8395815170008718,
+    "calibrated_policy_v3": 0.8500435919790759,
+    "absolute_change": 0.010462074978204061
+  },
+  "allowed_fraud_value_inr": {
+    "metric": "allowed_fraud_value_inr",
+    "hardened_v2": 484364.3400000001,
+    "calibrated_policy_v3": 445325.73,
+    "absolute_change": -39038.6100000001
+  },
+  "false_positive_blocks": {
+    "metric": "false_positive_blocks",
+    "hardened_v2": 167,
+    "calibrated_policy_v3": 19,
+    "absolute_change": -148
+  },
+  "false_blocked_legitimate_value_inr": {
+    "metric": "false_blocked_legitimate_value_inr",
+    "hardened_v2": 590617.3999999999,
+    "calibrated_policy_v3": 118498.85,
+    "absolute_change": -472118.54999999993
+  }
+}

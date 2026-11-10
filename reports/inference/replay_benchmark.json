@@ -1,0 +1,17 @@
+{
+  "started_at_utc": "2026-11-09T20:11:33.103460+00:00",
+  "total_requests": 10001,
+  "unique_transactions": 10000,
+  "idempotent_replays": 1,
+  "decisions": {
+    "REVIEW": 4091,
+    "BLOCK": 609,
+    "ALLOW": 5300
+  },
+  "latency_ms": {
+    "p50": 8.301,
+    "p95": 20.268,
+    "p99": 21.486
+  },
+  "model_version": "calibrated_policy_v3"
+}

@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.env
+mlruns/
+artifacts/*.joblib
+artifacts/baselines/
+data/raw/*.parquet
+data/processed/*.parquet
+data/reference/*.parquet
+reports/*.html
+reports/inference/decisions.jsonl
+mlflow.db
+mlruns/
+data/processed/test_predictions.parquet

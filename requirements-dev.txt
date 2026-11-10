@@ -1,0 +1,3 @@
+-r requirements-core.txt
+bandit>=1.8
+ruff>=0.9

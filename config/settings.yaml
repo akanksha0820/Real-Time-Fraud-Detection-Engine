@@ -1,0 +1,27 @@
+seed: 42
+simulation:
+  version: "hardened_v2"
+  start_date: "2025-01-01"
+  end_date: "2026-12-31"
+  target_transactions: 1000000
+  quick_transactions: 50000
+  chunk_size: 100000
+fraud:
+  target_rate_min: 0.005
+  target_rate_max: 0.015
+model:
+  version: "calibrated_policy_v3"
+  validation_start: "2026-07-01"
+  test_start: "2026-10-01"
+  random_state: 42
+  calibration_fraction: 0.5
+decision:
+  review_threshold: 0.35
+  block_threshold: 0.75
+  manual_review_cost: 120.0
+  false_decline_cost: 900.0
+  fraud_loss_multiplier: 1.0
+  review_detection_rate: 0.80
+  review_customer_friction_cost: 60.0
+  false_decline_amount_pct: 0.02
+  minimum_block_signals: 2

@@ -1,0 +1,32 @@
+{
+  "pipeline": {
+    "consumed_messages": 201,
+    "unique_valid_inputs": 100,
+    "persisted_transactions": 100,
+    "persisted_decisions": 100,
+    "pending_outbox": 0,
+    "dead_letters": 1,
+    "last_consumed_at": "2026-08-30 08:09:13.129656+00:00"
+  },
+  "decisions": [
+    {
+      "decision": "ALLOW",
+      "transactions": 95,
+      "amount_inr": "158262.70"
+    },
+    {
+      "decision": "REVIEW",
+      "transactions": 5,
+      "amount_inr": "14531.29"
+    }
+  ],
+  "cases": [
+    {
+      "status": "OPEN",
+      "cases": 5
+    }
+  ],
+  "alerts": [
+    "DEAD_LETTER_PRESENT"
+  ]
+}

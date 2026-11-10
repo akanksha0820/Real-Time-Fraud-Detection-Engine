@@ -1,0 +1,701 @@
+{
+    "openapi":  "3.1.0",
+    "info":  {
+                 "title":  "Real-Time Fraud \u0026 Transaction Risk Engine",
+                 "version":  "1.1.0"
+             },
+    "paths":  {
+                  "/live":  {
+                                "get":  {
+                                            "summary":  "Live",
+                                            "operationId":  "live_live_get",
+                                            "responses":  {
+                                                              "200":  {
+                                                                          "description":  "Successful Response",
+                                                                          "content":  {
+                                                                                          "application/json":  {
+                                                                                                                   "schema":  {
+                                                                                                                                  "additionalProperties":  true,
+                                                                                                                                  "type":  "object",
+                                                                                                                                  "title":  "Response Live Live Get"
+                                                                                                                              }
+                                                                                                               }
+                                                                                      }
+                                                                      }
+                                                          }
+                                        }
+                            },
+                  "/health":  {
+                                  "get":  {
+                                              "summary":  "Health",
+                                              "description":  "Backward-compatible liveness endpoint; does not initialize dependencies.",
+                                              "operationId":  "health_health_get",
+                                              "responses":  {
+                                                                "200":  {
+                                                                            "description":  "Successful Response",
+                                                                            "content":  {
+                                                                                            "application/json":  {
+                                                                                                                     "schema":  {
+                                                                                                                                    "additionalProperties":  true,
+                                                                                                                                    "type":  "object",
+                                                                                                                                    "title":  "Response Health Health Get"
+                                                                                                                                }
+                                                                                                                 }
+                                                                                        }
+                                                                        }
+                                                            }
+                                          }
+                              },
+                  "/ready":  {
+                                 "get":  {
+                                             "summary":  "Ready",
+                                             "operationId":  "ready_ready_get",
+                                             "responses":  {
+                                                               "200":  {
+                                                                           "description":  "Successful Response",
+                                                                           "content":  {
+                                                                                           "application/json":  {
+                                                                                                                    "schema":  {
+                                                                                                                                   "additionalProperties":  true,
+                                                                                                                                   "type":  "object",
+                                                                                                                                   "title":  "Response Ready Ready Get"
+                                                                                                                               }
+                                                                                                                }
+                                                                                       }
+                                                                       }
+                                                           }
+                                         }
+                             },
+                  "/model":  {
+                                 "get":  {
+                                             "summary":  "Model Metadata",
+                                             "operationId":  "model_metadata_model_get",
+                                             "parameters":  [
+                                                                {
+                                                                    "name":  "x-api-key",
+                                                                    "in":  "header",
+                                                                    "required":  false,
+                                                                    "schema":  {
+                                                                                   "anyOf":  [
+                                                                                                 {
+                                                                                                     "type":  "string"
+                                                                                                 },
+                                                                                                 {
+                                                                                                     "type":  "null"
+                                                                                                 }
+                                                                                             ],
+                                                                                   "title":  "X-Api-Key"
+                                                                               }
+                                                                }
+                                                            ],
+                                             "responses":  {
+                                                               "200":  {
+                                                                           "description":  "Successful Response",
+                                                                           "content":  {
+                                                                                           "application/json":  {
+                                                                                                                    "schema":  {
+                                                                                                                                   "type":  "object",
+                                                                                                                                   "additionalProperties":  true,
+                                                                                                                                   "title":  "Response Model Metadata Model Get"
+                                                                                                                               }
+                                                                                                                }
+                                                                                       }
+                                                                       },
+                                                               "422":  {
+                                                                           "description":  "Validation Error",
+                                                                           "content":  {
+                                                                                           "application/json":  {
+                                                                                                                    "schema":  {
+                                                                                                                                   "$ref":  "#/components/schemas/HTTPValidationError"
+                                                                                                                               }
+                                                                                                                }
+                                                                                       }
+                                                                       }
+                                                           }
+                                         }
+                             },
+                  "/metrics":  {
+                                   "get":  {
+                                               "summary":  "Metrics",
+                                               "operationId":  "metrics_metrics_get",
+                                               "parameters":  [
+                                                                  {
+                                                                      "name":  "x-api-key",
+                                                                      "in":  "header",
+                                                                      "required":  false,
+                                                                      "schema":  {
+                                                                                     "anyOf":  [
+                                                                                                   {
+                                                                                                       "type":  "string"
+                                                                                                   },
+                                                                                                   {
+                                                                                                       "type":  "null"
+                                                                                                   }
+                                                                                               ],
+                                                                                     "title":  "X-Api-Key"
+                                                                                 }
+                                                                  }
+                                                              ],
+                                               "responses":  {
+                                                                 "200":  {
+                                                                             "description":  "Successful Response",
+                                                                             "content":  {
+                                                                                             "application/json":  {
+                                                                                                                      "schema":  {
+                                                                                                                                     "type":  "object",
+                                                                                                                                     "additionalProperties":  true,
+                                                                                                                                     "title":  "Response Metrics Metrics Get"
+                                                                                                                                 }
+                                                                                                                  }
+                                                                                         }
+                                                                         },
+                                                                 "422":  {
+                                                                             "description":  "Validation Error",
+                                                                             "content":  {
+                                                                                             "application/json":  {
+                                                                                                                      "schema":  {
+                                                                                                                                     "$ref":  "#/components/schemas/HTTPValidationError"
+                                                                                                                                 }
+                                                                                                                  }
+                                                                                         }
+                                                                         }
+                                                             }
+                                           }
+                               },
+                  "/operations/summary":  {
+                                              "get":  {
+                                                          "summary":  "Operations Summary",
+                                                          "operationId":  "operations_summary_operations_summary_get",
+                                                          "parameters":  [
+                                                                             {
+                                                                                 "name":  "x-api-key",
+                                                                                 "in":  "header",
+                                                                                 "required":  false,
+                                                                                 "schema":  {
+                                                                                                "anyOf":  [
+                                                                                                              {
+                                                                                                                  "type":  "string"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                  "type":  "null"
+                                                                                                              }
+                                                                                                          ],
+                                                                                                "title":  "X-Api-Key"
+                                                                                            }
+                                                                             }
+                                                                         ],
+                                                          "responses":  {
+                                                                            "200":  {
+                                                                                        "description":  "Successful Response",
+                                                                                        "content":  {
+                                                                                                        "application/json":  {
+                                                                                                                                 "schema":  {
+                                                                                                                                                "type":  "object",
+                                                                                                                                                "additionalProperties":  true,
+                                                                                                                                                "title":  "Response Operations Summary Operations Summary Get"
+                                                                                                                                            }
+                                                                                                                             }
+                                                                                                    }
+                                                                                    },
+                                                                            "422":  {
+                                                                                        "description":  "Validation Error",
+                                                                                        "content":  {
+                                                                                                        "application/json":  {
+                                                                                                                                 "schema":  {
+                                                                                                                                                "$ref":  "#/components/schemas/HTTPValidationError"
+                                                                                                                                            }
+                                                                                                                             }
+                                                                                                    }
+                                                                                    }
+                                                                        }
+                                                      }
+                                          },
+                  "/operations/review-queue":  {
+                                                   "get":  {
+                                                               "summary":  "Review Queue",
+                                                               "operationId":  "review_queue_operations_review_queue_get",
+                                                               "parameters":  [
+                                                                                  {
+                                                                                      "name":  "limit",
+                                                                                      "in":  "query",
+                                                                                      "required":  false,
+                                                                                      "schema":  {
+                                                                                                     "type":  "integer",
+                                                                                                     "default":  100,
+                                                                                                     "title":  "Limit"
+                                                                                                 }
+                                                                                  },
+                                                                                  {
+                                                                                      "name":  "x-api-key",
+                                                                                      "in":  "header",
+                                                                                      "required":  false,
+                                                                                      "schema":  {
+                                                                                                     "anyOf":  [
+                                                                                                                   {
+                                                                                                                       "type":  "string"
+                                                                                                                   },
+                                                                                                                   {
+                                                                                                                       "type":  "null"
+                                                                                                                   }
+                                                                                                               ],
+                                                                                                     "title":  "X-Api-Key"
+                                                                                                 }
+                                                                                  }
+                                                                              ],
+                                                               "responses":  {
+                                                                                 "200":  {
+                                                                                             "description":  "Successful Response",
+                                                                                             "content":  {
+                                                                                                             "application/json":  {
+                                                                                                                                      "schema":  {
+                                                                                                                                                     "type":  "array",
+                                                                                                                                                     "items":  {
+                                                                                                                                                                   "type":  "object",
+                                                                                                                                                                   "additionalProperties":  true
+                                                                                                                                                               },
+                                                                                                                                                     "title":  "Response Review Queue Operations Review Queue Get"
+                                                                                                                                                 }
+                                                                                                                                  }
+                                                                                                         }
+                                                                                         },
+                                                                                 "422":  {
+                                                                                             "description":  "Validation Error",
+                                                                                             "content":  {
+                                                                                                             "application/json":  {
+                                                                                                                                      "schema":  {
+                                                                                                                                                     "$ref":  "#/components/schemas/HTTPValidationError"
+                                                                                                                                                 }
+                                                                                                                                  }
+                                                                                                         }
+                                                                                         }
+                                                                             }
+                                                           }
+                                               },
+                  "/operations/merchants":  {
+                                                "get":  {
+                                                            "summary":  "Merchant Risk",
+                                                            "operationId":  "merchant_risk_operations_merchants_get",
+                                                            "parameters":  [
+                                                                               {
+                                                                                   "name":  "limit",
+                                                                                   "in":  "query",
+                                                                                   "required":  false,
+                                                                                   "schema":  {
+                                                                                                  "type":  "integer",
+                                                                                                  "default":  20,
+                                                                                                  "title":  "Limit"
+                                                                                              }
+                                                                               },
+                                                                               {
+                                                                                   "name":  "x-api-key",
+                                                                                   "in":  "header",
+                                                                                   "required":  false,
+                                                                                   "schema":  {
+                                                                                                  "anyOf":  [
+                                                                                                                {
+                                                                                                                    "type":  "string"
+                                                                                                                },
+                                                                                                                {
+                                                                                                                    "type":  "null"
+                                                                                                                }
+                                                                                                            ],
+                                                                                                  "title":  "X-Api-Key"
+                                                                                              }
+                                                                               }
+                                                                           ],
+                                                            "responses":  {
+                                                                              "200":  {
+                                                                                          "description":  "Successful Response",
+                                                                                          "content":  {
+                                                                                                          "application/json":  {
+                                                                                                                                   "schema":  {
+                                                                                                                                                  "type":  "array",
+                                                                                                                                                  "items":  {
+                                                                                                                                                                "type":  "object",
+                                                                                                                                                                "additionalProperties":  true
+                                                                                                                                                            },
+                                                                                                                                                  "title":  "Response Merchant Risk Operations Merchants Get"
+                                                                                                                                              }
+                                                                                                                               }
+                                                                                                      }
+                                                                                      },
+                                                                              "422":  {
+                                                                                          "description":  "Validation Error",
+                                                                                          "content":  {
+                                                                                                          "application/json":  {
+                                                                                                                                   "schema":  {
+                                                                                                                                                  "$ref":  "#/components/schemas/HTTPValidationError"
+                                                                                                                                              }
+                                                                                                                               }
+                                                                                                      }
+                                                                                      }
+                                                                          }
+                                                        }
+                                            },
+                  "/operations/model-governance":  {
+                                                       "get":  {
+                                                                   "summary":  "Model Governance",
+                                                                   "operationId":  "model_governance_operations_model_governance_get",
+                                                                   "parameters":  [
+                                                                                      {
+                                                                                          "name":  "x-api-key",
+                                                                                          "in":  "header",
+                                                                                          "required":  false,
+                                                                                          "schema":  {
+                                                                                                         "anyOf":  [
+                                                                                                                       {
+                                                                                                                           "type":  "string"
+                                                                                                                       },
+                                                                                                                       {
+                                                                                                                           "type":  "null"
+                                                                                                                       }
+                                                                                                                   ],
+                                                                                                         "title":  "X-Api-Key"
+                                                                                                     }
+                                                                                      }
+                                                                                  ],
+                                                                   "responses":  {
+                                                                                     "200":  {
+                                                                                                 "description":  "Successful Response",
+                                                                                                 "content":  {
+                                                                                                                 "application/json":  {
+                                                                                                                                          "schema":  {
+                                                                                                                                                         "type":  "object",
+                                                                                                                                                         "additionalProperties":  true,
+                                                                                                                                                         "title":  "Response Model Governance Operations Model Governance Get"
+                                                                                                                                                     }
+                                                                                                                                      }
+                                                                                                             }
+                                                                                             },
+                                                                                     "422":  {
+                                                                                                 "description":  "Validation Error",
+                                                                                                 "content":  {
+                                                                                                                 "application/json":  {
+                                                                                                                                          "schema":  {
+                                                                                                                                                         "$ref":  "#/components/schemas/HTTPValidationError"
+                                                                                                                                                     }
+                                                                                                                                      }
+                                                                                                             }
+                                                                                             }
+                                                                                 }
+                                                               }
+                                                   },
+                  "/operations/cases/{case_id}":  {
+                                                      "patch":  {
+                                                                    "summary":  "Update Case",
+                                                                    "operationId":  "update_case_operations_cases__case_id__patch",
+                                                                    "parameters":  [
+                                                                                       {
+                                                                                           "name":  "case_id",
+                                                                                           "in":  "path",
+                                                                                           "required":  true,
+                                                                                           "schema":  {
+                                                                                                          "type":  "integer",
+                                                                                                          "title":  "Case Id"
+                                                                                                      }
+                                                                                       },
+                                                                                       {
+                                                                                           "name":  "x-api-key",
+                                                                                           "in":  "header",
+                                                                                           "required":  false,
+                                                                                           "schema":  {
+                                                                                                          "anyOf":  [
+                                                                                                                        {
+                                                                                                                            "type":  "string"
+                                                                                                                        },
+                                                                                                                        {
+                                                                                                                            "type":  "null"
+                                                                                                                        }
+                                                                                                                    ],
+                                                                                                          "title":  "X-Api-Key"
+                                                                                                      }
+                                                                                       }
+                                                                                   ],
+                                                                    "requestBody":  {
+                                                                                        "required":  true,
+                                                                                        "content":  {
+                                                                                                        "application/json":  {
+                                                                                                                                 "schema":  {
+                                                                                                                                                "$ref":  "#/components/schemas/CaseUpdate"
+                                                                                                                                            }
+                                                                                                                             }
+                                                                                                    }
+                                                                                    },
+                                                                    "responses":  {
+                                                                                      "200":  {
+                                                                                                  "description":  "Successful Response",
+                                                                                                  "content":  {
+                                                                                                                  "application/json":  {
+                                                                                                                                           "schema":  {
+                                                                                                                                                          "type":  "object",
+                                                                                                                                                          "additionalProperties":  true,
+                                                                                                                                                          "title":  "Response Update Case Operations Cases  Case Id  Patch"
+                                                                                                                                                      }
+                                                                                                                                       }
+                                                                                                              }
+                                                                                              },
+                                                                                      "422":  {
+                                                                                                  "description":  "Validation Error",
+                                                                                                  "content":  {
+                                                                                                                  "application/json":  {
+                                                                                                                                           "schema":  {
+                                                                                                                                                          "$ref":  "#/components/schemas/HTTPValidationError"
+                                                                                                                                                      }
+                                                                                                                                       }
+                                                                                                              }
+                                                                                              }
+                                                                                  }
+                                                                }
+                                                  },
+                  "/score":  {
+                                 "post":  {
+                                              "summary":  "Score",
+                                              "operationId":  "score_score_post",
+                                              "parameters":  [
+                                                                 {
+                                                                     "name":  "x-api-key",
+                                                                     "in":  "header",
+                                                                     "required":  false,
+                                                                     "schema":  {
+                                                                                    "anyOf":  [
+                                                                                                  {
+                                                                                                      "type":  "string"
+                                                                                                  },
+                                                                                                  {
+                                                                                                      "type":  "null"
+                                                                                                  }
+                                                                                              ],
+                                                                                    "title":  "X-Api-Key"
+                                                                                }
+                                                                 }
+                                                             ],
+                                              "requestBody":  {
+                                                                  "required":  true,
+                                                                  "content":  {
+                                                                                  "application/json":  {
+                                                                                                           "schema":  {
+                                                                                                                          "$ref":  "#/components/schemas/TransactionEvent"
+                                                                                                                      }
+                                                                                                       }
+                                                                              }
+                                                              },
+                                              "responses":  {
+                                                                "200":  {
+                                                                            "description":  "Successful Response",
+                                                                            "content":  {
+                                                                                            "application/json":  {
+                                                                                                                     "schema":  {
+                                                                                                                                    "type":  "object",
+                                                                                                                                    "additionalProperties":  true,
+                                                                                                                                    "title":  "Response Score Score Post"
+                                                                                                                                }
+                                                                                                                 }
+                                                                                        }
+                                                                        },
+                                                                "422":  {
+                                                                            "description":  "Validation Error",
+                                                                            "content":  {
+                                                                                            "application/json":  {
+                                                                                                                     "schema":  {
+                                                                                                                                    "$ref":  "#/components/schemas/HTTPValidationError"
+                                                                                                                                }
+                                                                                                                 }
+                                                                                        }
+                                                                        }
+                                                            }
+                                          }
+                             }
+              },
+    "components":  {
+                       "schemas":  {
+                                       "CaseUpdate":  {
+                                                          "properties":  {
+                                                                             "status":  {
+                                                                                            "type":  "string",
+                                                                                            "enum":  [
+                                                                                                         "OPEN",
+                                                                                                         "IN_PROGRESS",
+                                                                                                         "RESOLVED",
+                                                                                                         "CLOSED"
+                                                                                                     ],
+                                                                                            "title":  "Status"
+                                                                                        },
+                                                                             "assigned_to":  {
+                                                                                                 "anyOf":  [
+                                                                                                               {
+                                                                                                                   "type":  "string",
+                                                                                                                   "maxLength":  200
+                                                                                                               },
+                                                                                                               {
+                                                                                                                   "type":  "null"
+                                                                                                               }
+                                                                                                           ],
+                                                                                                 "title":  "Assigned To"
+                                                                                             },
+                                                                             "outcome":  {
+                                                                                             "anyOf":  [
+                                                                                                           {
+                                                                                                               "type":  "string",
+                                                                                                               "enum":  [
+                                                                                                                            "FRAUD",
+                                                                                                                            "LEGITIMATE",
+                                                                                                                            "INCONCLUSIVE"
+                                                                                                                        ]
+                                                                                                           },
+                                                                                                           {
+                                                                                                               "type":  "null"
+                                                                                                           }
+                                                                                                       ],
+                                                                                             "title":  "Outcome"
+                                                                                         },
+                                                                             "notes":  {
+                                                                                           "anyOf":  [
+                                                                                                         {
+                                                                                                             "type":  "string",
+                                                                                                             "maxLength":  4000
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "type":  "null"
+                                                                                                         }
+                                                                                                     ],
+                                                                                           "title":  "Notes"
+                                                                                       }
+                                                                         },
+                                                          "type":  "object",
+                                                          "required":  [
+                                                                           "status"
+                                                                       ],
+                                                          "title":  "CaseUpdate"
+                                                      },
+                                       "HTTPValidationError":  {
+                                                                   "properties":  {
+                                                                                      "detail":  {
+                                                                                                     "items":  {
+                                                                                                                   "$ref":  "#/components/schemas/ValidationError"
+                                                                                                               },
+                                                                                                     "type":  "array",
+                                                                                                     "title":  "Detail"
+                                                                                                 }
+                                                                                  },
+                                                                   "type":  "object",
+                                                                   "title":  "HTTPValidationError"
+                                                               },
+                                       "TransactionEvent":  {
+                                                                "properties":  {
+                                                                                   "transaction_id":  {
+                                                                                                          "type":  "string",
+                                                                                                          "maxLength":  128,
+                                                                                                          "minLength":  1,
+                                                                                                          "title":  "Transaction Id"
+                                                                                                      },
+                                                                                   "event_timestamp":  {
+                                                                                                           "type":  "string",
+                                                                                                           "format":  "date-time",
+                                                                                                           "title":  "Event Timestamp"
+                                                                                                       },
+                                                                                   "customer_id":  {
+                                                                                                       "type":  "string",
+                                                                                                       "maxLength":  128,
+                                                                                                       "minLength":  1,
+                                                                                                       "title":  "Customer Id"
+                                                                                                   },
+                                                                                   "account_id":  {
+                                                                                                      "type":  "string",
+                                                                                                      "maxLength":  128,
+                                                                                                      "minLength":  1,
+                                                                                                      "title":  "Account Id"
+                                                                                                  },
+                                                                                   "device_id":  {
+                                                                                                     "type":  "string",
+                                                                                                     "maxLength":  128,
+                                                                                                     "minLength":  1,
+                                                                                                     "title":  "Device Id"
+                                                                                                 },
+                                                                                   "merchant_id":  {
+                                                                                                       "type":  "string",
+                                                                                                       "maxLength":  128,
+                                                                                                       "minLength":  1,
+                                                                                                       "title":  "Merchant Id"
+                                                                                                   },
+                                                                                   "amount_inr":  {
+                                                                                                      "type":  "number",
+                                                                                                      "maximum":  2000000.0,
+                                                                                                      "exclusiveMinimum":  0.0,
+                                                                                                      "title":  "Amount Inr"
+                                                                                                  },
+                                                                                   "payment_channel":  {
+                                                                                                           "type":  "string",
+                                                                                                           "pattern":  "^(online|pos)$",
+                                                                                                           "title":  "Payment Channel"
+                                                                                                       },
+                                                                                   "latitude":  {
+                                                                                                    "type":  "number",
+                                                                                                    "maximum":  90.0,
+                                                                                                    "minimum":  -90.0,
+                                                                                                    "title":  "Latitude"
+                                                                                                },
+                                                                                   "longitude":  {
+                                                                                                     "type":  "number",
+                                                                                                     "maximum":  180.0,
+                                                                                                     "minimum":  -180.0,
+                                                                                                     "title":  "Longitude"
+                                                                                                 }
+                                                                               },
+                                                                "type":  "object",
+                                                                "required":  [
+                                                                                 "transaction_id",
+                                                                                 "event_timestamp",
+                                                                                 "customer_id",
+                                                                                 "account_id",
+                                                                                 "device_id",
+                                                                                 "merchant_id",
+                                                                                 "amount_inr",
+                                                                                 "payment_channel",
+                                                                                 "latitude",
+                                                                                 "longitude"
+                                                                             ],
+                                                                "title":  "TransactionEvent"
+                                                            },
+                                       "ValidationError":  {
+                                                               "properties":  {
+                                                                                  "loc":  {
+                                                                                              "items":  {
+                                                                                                            "anyOf":  [
+                                                                                                                          {
+                                                                                                                              "type":  "string"
+                                                                                                                          },
+                                                                                                                          {
+                                                                                                                              "type":  "integer"
+                                                                                                                          }
+                                                                                                                      ]
+                                                                                                        },
+                                                                                              "type":  "array",
+                                                                                              "title":  "Location"
+                                                                                          },
+                                                                                  "msg":  {
+                                                                                              "type":  "string",
+                                                                                              "title":  "Message"
+                                                                                          },
+                                                                                  "type":  {
+                                                                                               "type":  "string",
+                                                                                               "title":  "Error Type"
+                                                                                           },
+                                                                                  "input":  {
+                                                                                                "title":  "Input"
+                                                                                            },
+                                                                                  "ctx":  {
+                                                                                              "type":  "object",
+                                                                                              "title":  "Context"
+                                                                                          }
+                                                                              },
+                                                               "type":  "object",
+                                                               "required":  [
+                                                                                "loc",
+                                                                                "msg",
+                                                                                "type"
+                                                                            ],
+                                                               "title":  "ValidationError"
+                                                           }
+                                   }
+                   }
+}

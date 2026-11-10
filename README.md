@@ -15,7 +15,6 @@ An end-to-end financial risk platform designed and built by **Tanzeel Aftab**.
 [![Tests](https://img.shields.io/badge/Tests-21_Passing-16A34A)](#quality-gates)
 [![PR-AUC](https://img.shields.io/badge/Test_PR--AUC-0.8038-0EA5E9)](#verified-project-results)
 
-[**Architecture**](docs/architecture.md) · [**Live demo guide**](docs/demo.md) · [**Deployment**](docs/deployment.md) · [**Interview guide**](docs/interview-guide.md) · [**Tanzeel on GitHub**](https://github.com/txnzeel) · [**LinkedIn**](https://www.linkedin.com/in/txnzeel/)
 
 </div>
 
